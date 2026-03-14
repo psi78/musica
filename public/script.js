@@ -24,7 +24,7 @@ function handleLogin() {
     spinner.classList.remove('hidden');
     loginBtn.style.pointerEvents = 'none';
 
-    // Fake a server delay for "polish"
+    // Fake a server delay
     setTimeout(() => {
         // Submit the form to the backend
         loginForm.submit();
