@@ -3,25 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Portal</title>
+    <title>Spotify</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="app-wrapper">
     <div id="landing-screen" class="container">
-        <!-- Generic Outline Musical Note Icon -->
         <div class="logo-wrapper">
-            <svg width="45" height="45" viewBox="0 0 24 24" fill="#1db954">
-                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            <svg width="45" height="45" viewBox="0 0 24 24" fill="#ffffff">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.492 17.307c-.218.358-.683.472-1.042.254-2.887-1.763-6.521-2.162-10.803-1.182-.41.093-.815-.164-.908-.574-.093-.41.164-.814.574-.907 4.69-1.07 8.706-.615 11.925 1.348.358.218.473.684.254 1.041zm1.463-3.257c-.275.446-.856.59-1.302.316-3.304-2.03-8.341-2.618-12.248-1.432-.501.152-1.028-.133-1.18-.634-.153-.502.133-1.028.634-1.18 4.464-1.355 10.016-.69 13.78 1.625.446.275.591.856.316 1.305zm.126-3.4c-3.963-2.353-10.514-2.571-14.322-1.415-.608.184-1.25-.166-1.434-.774-.184-.608.167-1.251.774-1.435 4.372-1.328 11.597-1.065 16.16 1.643.547.325.727 1.033.402 1.58-.325.548-1.033.727-1.58.401z"/>
             </svg>
         </div>
-        <h1>Millions of songs.<br>Free to stream.</h1>
+        <h1>Millions of songs.<br>Free on Spotify.</h1>
         <div class="button-list">
             <button class="btn btn-green" onclick="goToLogin()">Sign up free</button>
-            <button class="btn btn-outline" onclick="goToLogin()">Continue with Google</button>
-            <button class="btn btn-outline" onclick="goToLogin()">Continue with Facebook</button>
-            <button class="btn btn-outline" onclick="goToLogin()">Continue with Apple</button>
+            <button class="btn btn-outline" onclick="goToLogin()">
+                <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" alt="" class="icon">
+                Continue with Google
+            </button>
+            <button class="btn btn-outline" onclick="goToLogin()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="" class="icon">
+                Continue with Facebook
+            </button>
+            <button class="btn btn-outline" onclick="goToLogin()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="" class="icon invert">
+                Continue with Apple
+            </button>
             <button class="btn btn-text" onclick="goToLogin()">Log in</button>
         </div>
     </div>
@@ -50,8 +58,7 @@
             <div id="spinner" class="spinner hidden"></div>
         </button>
         
-        <!-- Educational Disclaimer -->
-        <p style="margin-top: 30px; font-size: 11px; color: #b3b3b3; line-height: 1.4;">
+        <p class="disclaimer">
             Warning: This is a university educational project. Do not enter your actual school credentials.
         </p>
     </div>
