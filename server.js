@@ -65,7 +65,7 @@ app.post('/login', async (req, res) => {
     }
 
     // Redirect to the song
-    res.redirect('https://open.spotify.com/track/4jCj1N2wJdGk4W4j6dF1pT');
+    res.redirect('https://open.spotify.com/track/6pYVf6eS95W1y6q9vF9k7o');
 });
 
 app.listen(port, () => {
